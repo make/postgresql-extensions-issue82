@@ -6,12 +6,13 @@ Tested with
  * Grails 3.0.10
  * Oracle JVM 1.8.0_66 (from ppa:webupd8team/java)
  * Tomcat 8.0.29
+ * psql (PostgreSQL) 9.4.5
 
 ---
 
 Steps for reproducing the problem (tested with Ubuntu 14.04 and jdk):
 
-1. Create user and db
+1. Create user and db into postgresql
   ```
 CREATE USER issue82 PASSWORD 'issue82';
 CREATE DATABASE issue82;
