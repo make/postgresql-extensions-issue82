@@ -12,7 +12,7 @@ Tested with
 Steps for reproducing the problem (tested with Ubuntu 14.04 and jdk):
 
 1. Create user and db
-  ```SQL
+  ```
 CREATE USER issue82 PASSWORD 'issue82';
 CREATE DATABASE issue82;
 GRANT ALL PRIVILEGES ON DATABASE issue82 TO issue82;
