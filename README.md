@@ -11,15 +11,12 @@ Tested with
 
 Steps for reproducing the problem (tested with Ubuntu 14.04 and jdk):
 
-1. Create user and db
-```SQL
+1. Create user and db ```SQL
 CREATE USER issue82 PASSWORD 'issue82';
 CREATE DATABASE issue82;
 GRANT ALL PRIVILEGES ON DATABASE issue82 TO issue82;
 ```
-
-2. Install tomcat
-```bash
+2. Install tomcat ```bash
 cd /opt
 sudo wget http://www.nic.funet.fi/pub/mirrors/apache.org/tomcat/tomcat-8/v8.0.29/bin/apache-tomcat-8.0.29.tar.gz
 sudo tar -xzf apache-tomcat-8.0.29.tar.gz
@@ -59,9 +56,7 @@ end script
 ' | sudo tee /etc/init/tomcat.conf
 sudo chmod 644 /etc/init/tomcat.conf
 ```
-
-3. Deploy war
-```bash
+3. Deploy war ```bash
 rm -r build
 grails clean
 grails war
@@ -73,8 +68,6 @@ sudo rm -r /opt/tomcat/webapps/${APP}*
 sudo cp build/libs/*.war /opt/tomcat/webapps/${APP}.war
 sudo start tomcat
 ```
-
-4. See if the error occurs
-```bash
+4. See if the error occurs ```bash
 less +F /opt/tomcat/logs/catalina.out
 ```
